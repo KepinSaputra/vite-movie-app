@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: auto;
+  height: auto;
+  background-color: #424242;
+}
+
+.container {
+  width: auto;
+  height: auto;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: rgb(122, 122, 122);
+  box-shadow: 1px 2px 6px rgb(155, 155, 155);
+}
+
+.route {
+  text-decoration: none;
+  color: black;
+  padding: 1em;
+}
+
+.active {
+  background-color: white;
+  border-radius: 0.25em;
+}
+
+.search-form {
+  gap: 1em;
+  margin-right: 1em;
+}
+
+.categories {
+  margin-left: 1em;
+}
+
+.categories,
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form button {
+  color: black;
+  background-color: #c2c2c2;
+}
+
+.search-form button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.search-form input,
+.search-form button {
+  border-radius: 0.5em;
+  padding: 0.5em;
+  border: none;
+  font-size: 1.1em;
+}
+
+.movie-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 1em;
+  padding-top: 0.5em;
+  transition: transform 0.2s;
+  box-shadow: 0px 0px 45px 2px rgba(124, 124, 124, 0.6) inset;
+  border-radius: 0.5em;
+}
+
+.movie-container:hover {
+  transform: scale(1.05);
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 2em;
+  margin: 1em 0;
+}
+
+.movie-details {
+  text-align: center;
+  padding: 0.5em;
+  color: rgb(221, 221, 221);
+}
+
+.poster-image {
+  border-radius: 0.5em;
+  object-fit: cover;
+  width: 275px;
+  height: auto;
+}
+
+.backdrop-image {
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+}

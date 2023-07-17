@@ -14,6 +14,7 @@ function App() {
 
   useEffect(() => {
     getMovie(params).then((res) => {
+      console.log(res)
       setMovies(res)
     })
   }, [params])
@@ -65,7 +66,6 @@ function App() {
         />
         <Route path="/rated" element={<TopRated movie={movies} />} />
         <Route path="/popular" element={<PopularMovie movie={movies} />} />
-        <Route path="/detail" element={<MovieDetail movie={movies} />} />
       </Routes>
     </>
   )

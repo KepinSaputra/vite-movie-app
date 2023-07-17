@@ -5,19 +5,9 @@ export default function Home({ movie, movieDetail }) {
   const navigate = useNavigate()
 
   const MovieList = () => {
-    function handleOnClick(id) {
-      navigate("/detail")
-      movieDetail(id)
-    }
     return movie.map((movie) => {
       return (
-        <div
-          onClick={() => {
-            handleOnClick(movie.id)
-          }}
-          className="movie-container"
-          key={movie.id}
-        >
+        <div className="movie-container" key={movie.id}>
           <img
             className="poster-image"
             src={import.meta.env.VITE_IMAGE_URL + movie.poster_path}
